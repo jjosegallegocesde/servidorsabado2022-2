@@ -6,7 +6,9 @@ export class ControladorReserva{
 
     constructor(){}
 
-    agregarResreva(request,response){
+    agregarReserva(request,response){
+
+        let datosARegistrar=request.body
 
         try{
 
@@ -49,6 +51,9 @@ export class ControladorReserva{
 
 
     consultarReserva(request,response){
+
+        let id=request.params.id
+
         try{
 
             response.status(200).json({
@@ -66,10 +71,11 @@ export class ControladorReserva{
         }
     }
 
-
-
-
     editarReserva(request,response){
+
+        let id=request.params.id
+        let datosAEditar=request.body
+
         try{
 
             response.status(200).json({

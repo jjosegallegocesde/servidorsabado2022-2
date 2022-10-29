@@ -8,6 +8,9 @@ export class ControladorHabitacion{
 
     agregarHabitacion(request,response){
 
+        let datosARegistrar=request.body
+        console.log(datosARegistrar)
+
         try{
 
             response.status(200).json({
@@ -28,7 +31,7 @@ export class ControladorHabitacion{
 
 
 
-    consultarHabitiones(request,response){
+    consultarHabitaciones(request,response){
         try{
 
             response.status(200).json({
@@ -49,6 +52,10 @@ export class ControladorHabitacion{
 
 
     consultarHabitacion(request,response){
+
+        let id=request.params.id
+        console.log("el id enviado fiue: "+id)
+
         try{
 
             response.status(200).json({
@@ -70,6 +77,13 @@ export class ControladorHabitacion{
 
 
     editarHabitacion(request,response){
+
+        let id=request.params.id
+        let datosAEditar=request.body
+
+        console.log("EDITANDO A: "+id)
+        console.log(datosAEditar)
+
         try{
 
             response.status(200).json({

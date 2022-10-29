@@ -16,12 +16,12 @@ let controlReserva= new ControladorReserva()
 
 //DEFINO LAS RUTAS PARA CADA SERVICIO DE MI API:
 rutas.post('/api/hotel/habitaciones',controlHabitacion.agregarHabitacion)
-rutas.get('/api/hotel/habitaciones',controlHabitacion.consultarHabitiones)
+rutas.get('/api/hotel/habitaciones',controlHabitacion.consultarHabitaciones)
 rutas.get('/api/hotel/habitaciones/:id',controlHabitacion.consultarHabitacion)
 rutas.put('/api/hotel/habitaciones/:id',controlHabitacion.editarHabitacion)
 
 //RUTAS PARA SERVICIO DE RESERVAS
-rutas.post('/api/hotel/reservas',controlReserva.agregarResreva)
+rutas.post('/api/hotel/reservas',controlReserva.agregarReserva)
 rutas.get('/api/hotel/reservas',controlReserva.consultarReservas)
 rutas.get('/api/hotel/reservas/:id',controlReserva.consultarReserva)
 rutas.put('/api/hotel/reservas/:id',controlReserva.editarReserva)
